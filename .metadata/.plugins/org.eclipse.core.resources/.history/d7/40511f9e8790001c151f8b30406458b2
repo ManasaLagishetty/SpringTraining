@@ -1,0 +1,57 @@
+package com.example.demo.entity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="paymentInfo")
+public class Payment {
+	
+	@Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="paymentId")
+	private int paymentId;
+	@Column(name="bankName")
+	private String bankName;
+	@Column(name="payment")
+	private int  payment;
+	@Column(name="PassengerId")
+	private int passenegerId;
+	public Payment() {
+		super();
+	}
+	public Payment(int paymentId, String bankName, int payment) {
+		super();
+		this.paymentId = paymentId;
+		this.bankName = bankName;
+		this.payment = payment;
+	}
+	public int getPaymentId() {
+		return paymentId;
+	}
+	public void setPaymentId(int paymentId) {
+		this.paymentId = paymentId;
+	}
+	public String getBankName() {
+		return bankName;
+	}
+	public void setBankName(String bankName) {
+		this.bankName = bankName;
+	}
+	public int getPayment() {
+		return payment;
+	}
+	public void setPayment(int payment) {
+		this.payment = payment;
+	}
+	@Override
+	public String toString() {
+		return "Payment [paymentId=" + paymentId + ", bankName=" + bankName + ", payment=" + payment + "]";
+	}
+	
+
+}

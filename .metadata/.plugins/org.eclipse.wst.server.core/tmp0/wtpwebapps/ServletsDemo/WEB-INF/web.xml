@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+		  
+<servlet>
+   <servlet-name>servletsdemo</servlet-name>
+   <servlet-class>servletsdemo.FirstServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>servletsdemo</servlet-name>
+   <url-pattern>/fs</url-pattern>
+</servlet-mapping>
+
+
+<servlet>
+   <servlet-name>servletadd</servlet-name>
+   <servlet-class>servletadd.AddServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>servletadd</servlet-name>
+   <url-pattern>/add</url-pattern>
+</servlet-mapping>
+
+<filter>
+<filter-name>Filter</filter-name>
+<filter-class>servletadd.AddFilter</filter-class>
+</filter>
+<filter-mapping>
+<filter-name>Filter</filter-name>
+<url-pattern>/add</url-pattern>
+</filter-mapping>
+
+
+
+<servlet>
+   <servlet-name>servletDemo</servlet-name>
+   <servlet-class>servletadd.SquareServlet</servlet-class>
+</servlet>
+
+<servlet-mapping>
+  <servlet-name>servletDemo</servlet-name>
+   <url-pattern>/square</url-pattern>
+</servlet-mapping>
+
+
+
+
+
+
+
+
+
+
+</web-app>

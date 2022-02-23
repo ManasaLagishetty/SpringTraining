@@ -1,0 +1,9 @@
+package com.example.demo.entity;
+
+public class Passenger {
+	private int passengerId;
+	private String passengerName;
+	private int phone;
+	private Payment payment;
+
+}

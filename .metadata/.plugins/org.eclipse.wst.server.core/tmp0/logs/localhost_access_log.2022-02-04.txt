@@ -1,0 +1,7 @@
+127.0.0.1 - - [04/Feb/2022:11:59:08 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [04/Feb/2022:11:59:09 +0530] "GET /ServletsDemo/add.html HTTP/1.1" 304 -
+0:0:0:0:0:0:0:1 - - [04/Feb/2022:11:59:09 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [04/Feb/2022:11:59:21 +0530] "GET /ServletsDemo/add?num1=3&num2=2 HTTP/1.1" 200 16
+0:0:0:0:0:0:0:1 - - [04/Feb/2022:11:59:32 +0530] "GET /ServletsDemo/add HTTP/1.1" 500 1078
+0:0:0:0:0:0:0:1 - - [04/Feb/2022:11:59:55 +0530] "GET /ServletsDemo/add?num1=-4&num2=3 HTTP/1.1" 200 23
+0:0:0:0:0:0:0:1 - - [04/Feb/2022:13:11:59 +0530] "GET /ServletsDemo/WEB-INF/classes/servletadd/AddFilter.java HTTP/1.1" 404 682

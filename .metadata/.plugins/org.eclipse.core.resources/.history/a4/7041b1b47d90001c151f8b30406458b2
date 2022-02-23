@@ -1,0 +1,60 @@
+package com.example.demo.entity;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="passengerInfo")
+public class Passenger {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	private int passengerId;
+	private String passengerName;
+	private int phone;
+	private Payment payment;
+	public Passenger() {
+		super();
+	}
+	public Passenger(int passengerId, String passengerName, int phone, Payment payment) {
+		super();
+		this.passengerId = passengerId;
+		this.passengerName = passengerName;
+		this.phone = phone;
+		this.payment = payment;
+	}
+	public int getPassengerId() {
+		return passengerId;
+	}
+	public void setPassengerId(int passengerId) {
+		this.passengerId = passengerId;
+	}
+	public String getPassengerName() {
+		return passengerName;
+	}
+	public void setPassengerName(String passengerName) {
+		this.passengerName = passengerName;
+	}
+	public int getPhone() {
+		return phone;
+	}
+	public void setPhone(int phone) {
+		this.phone = phone;
+	}
+	public Payment getPayment() {
+		return payment;
+	}
+	public void setPayment(Payment payment) {
+		this.payment = payment;
+	}
+	@Override
+	public String toString() {
+		return "Passenger [passengerId=" + passengerId + ", passengerName=" + passengerName + ", phone=" + phone
+				+ ", payment=" + payment + "]";
+	}
+	
+
+}

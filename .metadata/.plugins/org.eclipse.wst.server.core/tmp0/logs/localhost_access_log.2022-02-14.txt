@@ -1,0 +1,4 @@
+127.0.0.1 - - [14/Feb/2022:13:30:53 +0530] "GET / HTTP/1.1" 404 751
+0:0:0:0:0:0:0:1 - - [14/Feb/2022:13:30:54 +0530] "GET /mvc/registration.jsp HTTP/1.1" 200 647
+0:0:0:0:0:0:0:1 - - [14/Feb/2022:13:30:54 +0530] "GET /favicon.ico HTTP/1.1" 404 762
+0:0:0:0:0:0:0:1 - - [14/Feb/2022:13:31:05 +0530] "GET /mvc/Register?name=Manasa&phone=999999&email=manasalagishetty11%40gmail.com HTTP/1.1" 200 266

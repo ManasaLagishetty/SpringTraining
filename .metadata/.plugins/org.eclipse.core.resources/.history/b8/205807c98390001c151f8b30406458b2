@@ -1,0 +1,28 @@
+package com.example.demo.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.Passenger;
+import com.example.demo.entity.Payment;
+import com.example.demo.repository.PassengerRepo;
+import com.example.demo.repository.PaymentRepo;
+
+@Service
+public class PassengerService {
+	
+	@Autowired
+	private PassengerRepo passengerRepo;
+	
+	private PaymentRepo paymentRepo;
+
+	public void savePassenger(Passenger passenger) {
+		
+		Payment p=passenger.getPayment();
+		
+		 
+		passengerRepo.save(passenger);
+		
+	}
+
+}

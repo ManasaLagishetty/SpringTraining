@@ -1,0 +1,50 @@
+package com.employee.demo.controller;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestAttribute;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.employee.demo.model.EmployeeEntity;
+import com.employee.demo.repository.EmployeeRepository;
+
+@RestController
+public class EmployeeController {
+	@Autowired
+	private EmployeeRepository employeeRepository ;
+	
+	@GetMapping("/getDetails")
+	public List<EmployeeEntity> getEmployee(){
+		return (List<EmployeeEntity>) employeeRepository.findAll();
+	}	
+		
+	@PostMapping("/saveDetails")	
+	public String saveEmployee(@RequestBody EmployeeEntity employeeEntity) {
+		employeeRepository.save(employeeEntity);
+		return "Employee details saved";
+		
+	}
+	
+	@DeleteMapping("/deleteById/{id}")
+	
+	public void deleteEmployeeById(@PathVariable Integer id) {
+		
+		employeeRepository.deleteById(id);
+		
+	}
+	
+	@GetMapping("getById/{id}")
+	public Optional<EmployeeEntity> getEmployeeById(@PathVariable Integer id) {
+		return   employeeRepository.findById(id);
+	}
+	
+	
+
+}

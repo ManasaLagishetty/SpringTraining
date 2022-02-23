@@ -1,0 +1,19 @@
+package com.example.demo.service;
+
+import org.springframework.stereotype.Service;
+
+import com.example.demo.entity.Passenger;
+import com.example.demo.repository.PassengerRepo;
+
+@Service
+public class PassengerService {
+	
+	private PassengerRepo passengerRepo;
+
+	public void savePassenger(Passenger passenger) {
+		 
+		passengerRepo.save(passenger);
+		
+	}
+
+}
